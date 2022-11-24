@@ -28,3 +28,6 @@ cypress/fixtures
 
 cypress/videos
 .eslintcache
+
+# environment variables
+.env
