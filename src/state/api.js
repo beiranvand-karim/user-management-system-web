@@ -37,3 +37,19 @@ export const requestToFetchUsers = async () => {
 		return response.data
 	} catch (e) {}
 }
+
+export const requestToDeleteUser = async (userId) => {
+	try {
+		const request = {
+			/* eslint-disable */
+			method:"delete",
+			url:`${env("API_HOST")}/users/`+ userId,
+			headers: {
+				"content-type": "application/json",
+				/* eslint-enable */
+			},
+		}
+		const response = await axios(request)
+		return response.data
+	} catch (e) {}
+}

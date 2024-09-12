@@ -3,7 +3,7 @@ import { Button, Container, FormControl, FormGroup } from "@material-ui/core"
 import styled from "styled-components"
 import { useDispatch } from "react-redux"
 
-import { DELETE_USER } from "../../state"
+import { REQUEST_DELETE_USER } from "../../state"
 
 const ContainerStyled = styled(Container)`
 	flex-grow: 1;
@@ -25,7 +25,7 @@ export const DeleteUser = ({ cancel, userId }) => {
 	const dispatch = useDispatch()
 
 	const deleteUser = () => {
-		dispatch({ type: DELETE_USER, payload: userId })
+		dispatch({ type: REQUEST_DELETE_USER, payload: userId })
 		cancel()
 	}
 	return (
